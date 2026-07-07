@@ -9,9 +9,13 @@ const GAS_URL =
 let songs = [];
 let filteredSongs = [];
 
-const table = document.getElementById("songTable");
-const searchInput = document.getElementById("searchInput");
-const songCount = document.getElementById("songCount");
+// const table = document.getElementById("songTable");
+// const searchInput = document.getElementById("searchInput");
+// const songCount = document.getElementById("songCount");
+
+let table;
+let searchInput;
+let songCount;
 
 // const GAS_URL =
 // "https://script.google.com/macros/s/AKfycbzmwjKjm0-Rq9K50L1XHbdqmJwvDfTYk1DJvOoLYkTsoFVrfAfFQka3jAaJ8n307vE/exec";
@@ -24,15 +28,35 @@ async function loadSongs() {
 
     try {
 
+        console.log("読み込み開始");
+
+
         const response = await fetch(GAS_URL);
+
+
+        console.log("GAS取得成功");
+
 
         songs = await response.json();
 
+
+        console.log("取得データ", songs);
+
+
         filteredSongs = [...songs];
+
+
+        console.log("render開始");
+
 
         renderTable(filteredSongs);
 
+
+        console.log("render終了");
+
+
         createUnitFilter();
+
 
     } catch (error) {
 
@@ -47,7 +71,7 @@ async function loadSongs() {
 // ----------------------------
 
 function renderTable(list) {
-
+    console.log("renderTable実行", list);
     table.innerHTML = "";
 
     songCount.textContent = `全${list.length}曲`;
@@ -175,11 +199,22 @@ function createUnitFilter() {
 // イベント
 // ----------------------------
 
-searchInput.addEventListener("input", searchSongs);
+window.addEventListener("DOMContentLoaded",()=>{
 
-// ----------------------------
+    table = document.getElementById("songTable");
+    searchInput = document.getElementById("searchInput");
+    songCount = document.getElementById("songCount");
 
-loadSongs();
+
+    searchInput.addEventListener(
+        "input",
+        searchSongs
+    );
+
+
+    loadSongs();
+
+});
 
 function registerButtons(){
 
