@@ -9,6 +9,10 @@ let filteredSongs = [];
 const table = document.getElementById("songTable");
 const searchInput = document.getElementById("searchInput");
 const songCount = document.getElementById("songCount");
+
+const GAS_URL =
+"https://script.google.com/macros/s/AKfycbyIGevTxJJY4tD-ucpulCxRwNlTboTjRK0M-XQ_IT7FKjsHOOK5RzrtCbXSnM54X2E/exec";
+
 // ----------------------------
 // JSON読込
 // ----------------------------
@@ -17,7 +21,8 @@ async function loadSongs() {
 
     try {
 
-        const response = await fetch("data/songs.json");
+        const response =
+            await fetch(GAS_URL);
 
         songs = await response.json();
 
