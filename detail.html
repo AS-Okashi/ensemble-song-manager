@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>楽曲詳細 | Ensemble Song Manager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- サイドバー -->
+    <aside class="sidebar">
+
+        <h1>🎵 ESM</h1>
+
+
+        <nav>
+
+            <button class="menu active">
+                楽曲詳細
+            </button>
+
+
+            <button class="menu"
+            onclick="location.href='index.html'">
+                楽曲一覧
+            </button>
+
+
+        </nav>
+
+
+    </aside>
+
+
+
+    <!-- メイン -->
+    <main>
+
+
+        <header>
+
+            <h2>
+                楽曲詳細
+            </h2>
+
+
+        </header>
+
+
+
+        <section class="detail-container">
+
+
+            <h1 id="songTitle">
+                -
+            </h1>
+
+
+
+            <table class="detail-table">
+
+
+                <tr>
+
+                    <th>
+                        ユニット
+                    </th>
+
+                    <td id="unit">
+                    -
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <th>
+                        分類
+                    </th>
+
+                    <td id="category">
+                    -
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <th>
+                        メンバー
+                    </th>
+
+                    <td id="members">
+                    -
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <th>
+                        収録アルバム
+                    </th>
+
+                    <td id="album">
+                    -
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <th>
+                        イベント
+                    </th>
+
+                    <td id="event">
+                    -
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <th>
+                        発売日
+                    </th>
+
+                    <td id="releaseDate">
+                    -
+                    </td>
+
+                </tr>
+
+
+
+            </table>
+
+
+
+            <button
+            class="back-button"
+            onclick="history.back()">
+
+                ← 戻る
+
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<script src="js/detail.js"></script>
+
+
+</body>
+
+</html>
