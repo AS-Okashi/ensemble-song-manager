@@ -3,6 +3,9 @@
 // app.js
 // ============================
 
+const GAS_URL =
+"https://script.google.com/macros/s/AKfycbzmwjKjm0-Rq9K50L1XHbdqmJwvDfTYk1DJvOoLYkTsoFVrfAfFQka3jAaJ8n307vE/exec";
+
 let songs = [];
 let filteredSongs = [];
 
@@ -10,9 +13,8 @@ const table = document.getElementById("songTable");
 const searchInput = document.getElementById("searchInput");
 const songCount = document.getElementById("songCount");
 
-const GAS_URL =
-"https://script.google.com/macros/s/AKfycbzmwjKjm0-Rq9K50L1XHbdqmJwvDfTYk1DJvOoLYkTsoFVrfAfFQka3jAaJ8n307vE/exec
-";
+// const GAS_URL =
+// "https://script.google.com/macros/s/AKfycbzmwjKjm0-Rq9K50L1XHbdqmJwvDfTYk1DJvOoLYkTsoFVrfAfFQka3jAaJ8n307vE/exec";
 
 // ----------------------------
 // JSON読込
@@ -22,8 +24,7 @@ async function loadSongs() {
 
     try {
 
-        const response =
-            await fetch(GAS_URL);
+        const response = await fetch(GAS_URL);
 
         songs = await response.json();
 
