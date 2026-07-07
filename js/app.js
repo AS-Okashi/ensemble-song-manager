@@ -4,7 +4,7 @@
 // ============================
 
 const GAS_URL =
-"https://script.google.com/macros/s/AKfycbzmwjKjm0-Rq9K50L1XHbdqmJwvDfTYk1DJvOoLYkTsoFVrfAfFQka3jAaJ8n307vE/exec";
+"https://script.google.com/macros/s/AKfycbyVX0bPRZG3E2GCGJ1xHgKOifPy5QeWvDvlrvf7SlxNMPcCBLKJhmQK1LJpBgrtLRQ/exec";
 
 let songs = [];
 let filteredSongs = [];
