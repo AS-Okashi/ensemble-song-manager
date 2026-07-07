@@ -11,7 +11,8 @@ const searchInput = document.getElementById("searchInput");
 const songCount = document.getElementById("songCount");
 
 const GAS_URL =
-"https://script.google.com/macros/s/AKfycbyIGevTxJJY4tD-ucpulCxRwNlTboTjRK0M-XQ_IT7FKjsHOOK5RzrtCbXSnM54X2E/exec";
+"https://script.google.com/macros/s/AKfycbzmwjKjm0-Rq9K50L1XHbdqmJwvDfTYk1DJvOoLYkTsoFVrfAfFQka3jAaJ8n307vE/exec
+";
 
 // ----------------------------
 // JSON読込
