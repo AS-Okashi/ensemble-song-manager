@@ -59,6 +59,12 @@ function renderTable(list) {
                 <div class="action-buttons">
 
                     <button
+                        class="icon-button detail-button"
+                        data-id="${song.id}">
+                        👁️
+                    </button>
+
+                    <button
                         class="icon-button edit-button"
                         data-id="${song.id}">
                         ✏️
@@ -100,7 +106,13 @@ function searchSongs() {
 
             ||
 
-            song.unit.toLowerCase().includes(keyword);
+            song.unit.toLowerCase().includes(keyword)
+
+            || 
+            (song.members &&
+            song.members.some(member =>
+                member.toLowerCase().includes(keyword)
+            ))
 
         const matchUnit =
 
@@ -164,29 +176,71 @@ loadSongs();
 
 function registerButtons(){
 
-    document.querySelectorAll(".edit-button").forEach(button=>{
+
+    // 詳細ボタン
+    document.querySelectorAll(".detail-button")
+    .forEach(button=>{
+
 
         button.addEventListener("click",()=>{
 
-            const id = Number(button.dataset.id);
+
+            const id =
+            Number(button.dataset.id);
+
+
+            openDetail(id);
+
+
+        });
+
+
+    });
+
+
+
+    // 編集ボタン
+    document.querySelectorAll(".edit-button")
+    .forEach(button=>{
+
+
+        button.addEventListener("click",()=>{
+
+
+            const id =
+            Number(button.dataset.id);
+
 
             editSong(id);
 
+
         });
+
 
     });
 
-    document.querySelectorAll(".delete-button").forEach(button=>{
+
+
+    // 削除ボタン
+    document.querySelectorAll(".delete-button")
+    .forEach(button=>{
+
 
         button.addEventListener("click",()=>{
 
-            const id = Number(button.dataset.id);
+
+            const id =
+            Number(button.dataset.id);
+
 
             deleteSong(id);
 
+
         });
 
+
     });
+
 
 }
 
@@ -209,5 +263,12 @@ function deleteSong(id){
     filteredSongs = [...songs];
 
     renderTable(filteredSongs);
+
+}
+
+function openDetail(id){
+
+    location.href =
+    `detail.html?id=${id}`;
 
 }
