@@ -53,11 +53,33 @@ function renderTable(list) {
             <td>${song.title}</td>
             <td>${song.unit}</td>
             <td>${song.category}</td>
+
+            <td>
+
+                <div class="action-buttons">
+
+                    <button
+                        class="icon-button edit-button"
+                        data-id="${song.id}">
+                        ✏️
+                    </button>
+
+                    <button
+                        class="icon-button delete-button"
+                        data-id="${song.id}">
+                        🗑️
+                    </button>
+
+                </div>
+
+            </td>
         `;
 
         table.appendChild(row);
 
     });
+
+    registerButtons();
 
 }
 // ----------------------------
