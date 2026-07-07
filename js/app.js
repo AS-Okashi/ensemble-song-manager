@@ -161,3 +161,53 @@ searchInput.addEventListener("input", searchSongs);
 // ----------------------------
 
 loadSongs();
+
+function registerButtons(){
+
+    document.querySelectorAll(".edit-button").forEach(button=>{
+
+        button.addEventListener("click",()=>{
+
+            const id = Number(button.dataset.id);
+
+            editSong(id);
+
+        });
+
+    });
+
+    document.querySelectorAll(".delete-button").forEach(button=>{
+
+        button.addEventListener("click",()=>{
+
+            const id = Number(button.dataset.id);
+
+            deleteSong(id);
+
+        });
+
+    });
+
+}
+
+function editSong(id){
+
+    const song = songs.find(song=>song.id===id);
+
+    console.log("編集",song);
+
+}
+
+function deleteSong(id){
+
+    const result = confirm("この楽曲を削除しますか？");
+
+    if(!result) return;
+
+    songs = songs.filter(song=>song.id!==id);
+
+    filteredSongs = [...songs];
+
+    renderTable(filteredSongs);
+
+}
