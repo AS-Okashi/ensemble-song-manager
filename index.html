@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ensemble Song Manager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<div class="status-bar">
+
+    <span id="songCount">
+        全0曲
+    </span>
+
+</div>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <h1>🎵 ESM</h1>
+
+        <nav>
+
+            <button class="menu active">
+                楽曲一覧
+            </button>
+
+            <button class="menu">
+                ユニット
+            </button>
+
+            <button class="menu">
+                メンバー
+            </button>
+
+            <button class="menu">
+                イベント
+            </button>
+
+            <button class="menu">
+                アルバム
+            </button>
+
+        </nav>
+
+    </aside>
+
+    <main>
+
+        <header>
+
+            <h2>
+                あんさんぶるスターズ！！ 楽曲管理
+            </h2>
+
+        </header>
+
+        <section class="toolbar">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="曲名・ユニットで検索">
+
+            <button id="addButton">
+                ＋ 楽曲追加
+            </button>
+
+        </section>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>曲名</th>
+                <th>ユニット</th>
+                <th>種類</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="songTable">
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "title": "ONLY YOUR STARS!",
+    "unit": "Trickstar",
+    "category": "ユニット曲",
+    "members": [
+      "氷鷹北斗",
+      "明星スバル",
+      "遊木真",
+      "衣更真緒"
+    ],
+    "album": "",
+    "event": "",
+    "releaseDate": ""
+  },
+  {
+    "id": 2,
+    "title": "Finder Girl",
+    "unit": "Trickstar",
+    "category": "ユニット曲",
+    "members": [
+      "氷鷹北斗",
+      "明星スバル",
+      "遊木真",
+      "衣更真緒"
+    ],
+    "album": "",
+    "event": "",
+    "releaseDate": ""
+  },
+  {
+    "id": 3,
+    "title": "Promise Swords",
+    "unit": "Knights",
+    "category": "ユニット曲",
+    "members": [
+      "月永レオ",
+      "瀬名泉",
+      "朔間凛月",
+      "鳴上嵐",
+      "朱桜司"
+    ],
+    "album": "",
+    "event": "",
+    "releaseDate": ""
+  },
+  {
+    "id": 4,
+    "title": "Article of Faith",
+    "unit": "Knights",
+    "category": "ユニット曲",
+    "members": [
+      "月永レオ",
+      "瀬名泉",
+      "朔間凛月",
+      "鳴上嵐",
+      "朱桜司"
+    ],
+    "album": "",
+    "event": "",
+    "releaseDate": ""
+  },
+  {
+    "id": 5,
+    "title": "Melody in the Dark",
+    "unit": "UNDEAD",
+    "category": "ユニット曲",
+    "members": [
+      "朔間零",
+      "羽風薫",
+      "大神晃牙",
+      "乙狩アドニス"
+    ],
+    "album": "",
+    "event": "",
+    "releaseDate": ""
+  },
+  {
+    "id": 6,
+    "title": "Temptation Magic",
+    "unit": "Switch",
+    "category": "ユニット曲",
+    "members": [
+      "逆先夏目",
+      "青葉つむぎ",
+      "春川宙"
+    ],
+    "album": "",
+    "event": "",
+    "releaseDate": ""
+  }
+]
